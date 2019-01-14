@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: andrey
- * Date: 28.09.18
- * Time: 10:39
- */
+
 
 namespace FileConverter;
 
