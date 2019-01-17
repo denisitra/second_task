@@ -1,13 +1,16 @@
 <?php
-
-
 namespace FileConverter;
 
-
-class DecodeXML implements IDecode
+class DecodeXML implements DecodeInterface
 {
     public function decode(\SplFileObject $file): array
     {
-        // TODO: Implement decode() method.
+        $result = [];
+        $xml = simplexml_load_file($file->getBasename());
+        foreach($xml->children() as $fields)
+        {
+            $result [] = $fields;
+        }
+        return $result;
     }
 }
